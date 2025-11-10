@@ -121,7 +121,7 @@ function agregarCarritoAlimentos(idproduct, nombredelproduct, precioo) {
         carrito.push({
             idproducto: idproduct,
             nombredelproducto: nombredelproduct,
-            precio: precio0,
+            precio: precioo,
             cantidad: 1
         });
     }
