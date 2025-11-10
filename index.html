@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Inicio - CinePlus</title>
+    <style>
+        :root {
+            --colorfondo: #121212;
+            --colorprincipal: #E50914;
+            --colortexto: #FFFFFF;
+            --colorsecundario: #333333;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: var(--colorfondo);
+            color: var(--colortexto);
+        }
+
+        header {
+            background-color: var(--colorsecundario);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+            header h1 {
+                color: var(--colorprincipal);
+                font-size: 2em;
+                margin: 15px;
+            }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--colortexto);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                color: var(--colorprincipal);
+            }
+
+        main {
+            background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0) 50%, var(--colorfondo) 100%), url('img/FondoInicio.jpeg');
+            background-size: cover;
+            background-position: center top;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding: 30px;
+        }
+
+        section {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 80%;
+            z-index: 10;
+        }
+
+        div:first-child img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
+            display: block;
+        }
+
+        div h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--colortexto);
+        }
+
+        div:last-of-type span {
+            display: inline-block;
+            background-color: var(--colorprincipal);
+            color: var(--colortexto);
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        div:last-of-type div p {
+            margin-bottom: 15px;
+            color: var(--colortexto);
+        }
+
+        div:last-of-type a {
+            display: inline-block;
+            background-color: var(--colorprincipal);
+            color: var(--colortexto);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
+
+            div:last-of-type a:hover {
+                background-color: #ff333a;
+            }
+
+        footer {
+            background-color: var(--colorsecundario);
+            padding: 3px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #AAAAAA;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CinePlus</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Boletos.html">Comprar Boletos</a></li>
+                <li><a href="Alimentos.html">Alimentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <img src="img/Poster.jpeg" alt="Poster de la pelicula de estreno">
+            </div>
+            <div>
+                <span>¡ESTRENO EXCLUSIVO!</span>
+                <h2>Teléfono negro 2</h2>
+                <div>
+                    <p>
+                        <strong>Sinopsis:</strong>
+                        <br /> Cuatro años después de que Finney escapara del temible “Grabber”, el joven intenta rehacer su vida. Su hermana Gwen vuelve a recibir inquietantes llamadas del teléfono negro y visiones de tres chicos perseguidos en un campamento invernal. Para detener el ciclo, los hermanos viajarán a Alpine Lake, donde descubrirán que el mal no solo ha regresado, sino que es aún más poderoso.
+                    </p>
+                    <p>
+                        <strong>Género:</strong>
+                        Terror/Suspenso
+                    </p>
+                    <p>
+                        <strong>Duración:</strong>
+                        1h 54m
+                    </p>
+                    <p>
+                        <strong>Director:</strong>
+                        Scott Derrickson
+                    </p>
+                </div>
+                <a href="Boletos.html">Comprar Boletos </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 CinePlus</p>
+    </footer>
+</body>
+</html>

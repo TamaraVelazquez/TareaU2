@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pago - CinePlus</title>
+    <style>
+        :root {
+            --colorfondo: #121212;
+            --colorprincipal: #E50914;
+            --colortexto: #FFFFFF;
+            --colorsecundario: #333333;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: var(--colorfondo);
+            color: var(--colortexto);
+        }
+
+        header {
+            background-color: var(--colorsecundario);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+            header h1 {
+                color: var(--colorprincipal);
+                font-size: 2em;
+                margin: 15px;
+            }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--colortexto);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                color: var(--colorprincipal);
+            }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        section {
+            background-color: var(--colorsecundario);
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+            section h2 {
+                color: var(--colorprincipal);
+                margin-bottom: 30px;
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+
+            section div:first-of-type {
+                background-color: var(--colorfondo);
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 30px;
+                font-size: 1em;
+            }
+
+            section div:last-of-type {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+
+                section div:last-of-type div {
+                    flex-grow: 1;
+                    padding: 20px;
+                    background-color: var(--colorfondo);
+                    border: 2px solid var(--colorsecundario);
+                    border-radius: 8px;
+                    font-size: 1em;
+                }
+
+        main section a {
+            display: block;
+            background-color: var(--colorprincipal);
+            color: var(--colortexto);
+            padding: 15px 0;
+            border-radius: 5px;
+            margin-top: 15px;
+            width: 100%;
+            text-decoration: none;
+        }
+
+            button:hover {
+                background-color: var(--colorprincipal);
+            }
+
+        footer {
+            background-color: var(--colorsecundario);
+            padding: 3px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #AAAAAA;
+        }
+
+        .metodopago {
+            border-color: var(--colorprincipal) !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CinePlus</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Boletos.html">Comprar Boletos</a></li>
+                <li><a href="Alimentos.html">Alimentos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Método de Pago</h2>
+
+            <div>
+                Total a Pagar: <span id="totalapagar">$120.00</span>
+            </div>
+
+            <div>
+                <div id="opcionTarjeta">
+                    💳 Tarjeta
+                </div>
+                <div id="opcionEfectivo">
+                    💵 Efectivo
+                </div>
+            </div>
+
+            <a href="index.html">PAGAR</a>
+
+        </section>
+    </main>
+    <footer>
+        <p>2025 CinePlus</p>
+    </footer>
+
+    <script src="Script1.js"></script>
+</body>
+</html>

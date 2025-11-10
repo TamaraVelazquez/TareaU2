@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Boletos - CinePlus</title>
+    <style>
+        :root {
+            --colorfondo: #121212;
+            --colorprincipal: #E50914;
+            --colortexto: #FFFFFF;
+            --colorsecundario: #333333;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: var(--colorfondo);
+            color: var(--colortexto);
+        }
+
+        header {
+            background-color: var(--colorsecundario);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+            header h1 {
+                color: var(--colorprincipal);
+                font-size: 2em;
+                letter-spacing: 2px;
+                margin: 15px;
+            }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--colortexto);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                color: var(--colorprincipal);
+            }
+
+        main {
+            display: flex;
+            padding: 25px;
+            gap: 25px;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 95%;
+            margin: 0 auto;
+            min-width: 900px;
+        }
+
+            main section {
+                display: flex;
+                flex-direction: column; 
+                flex-grow: 1; 
+                flex-shrink: 1; 
+                flex-basis: 0;
+                padding: 30px;
+                border-radius: 8px;
+                background-color: var(--colorsecundario);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+
+                main section div:first-of-type { 
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                    main section div:first-of-type span {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 0.9em;
+                    }
+
+                        main section div:first-of-type span span {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 4px;
+                            background-color: royalblue;
+                        }
+
+                        main section div:first-of-type span:first-child span {
+                            background-color: gray;
+                        }
+                        
+                        main section div:first-of-type span:last-child span {
+                            background-color: red;
+                        }
+                
+                main section hr {
+                    border-color: rgba(255, 255, 255, 0.2);
+                    margin: 20px 0;
+                }
+
+                main section div:last-of-type {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    gap: 10px;
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                    main section div:last-of-type span {
+                        background-color: gray;
+                        color: var(--colortexto);
+                        padding: 5px 0;
+                        border-radius: 3px;
+                        font-weight: bold;
+                        user-select: none;
+                    }
+
+        aside {
+            width: 230px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: var(--colorsecundario);
+            position: sticky;
+            top: 100px;
+            align-self: flex-start;
+            height: fit-content;
+        }
+
+            aside h3 {
+                margin-top: 0;
+                border-bottom: 2px solid var(--colorprincipal);
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                color: var(--colorprincipal);
+                text-align: center;
+            }
+
+            aside div {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border-bottom: 2px solid var(--colorprincipal);
+            }
+
+            aside div p {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.9em;
+            }
+
+            aside a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 12px 0;
+                margin-top: 20px;
+                border-radius: 3px;
+                text-decoration: none;
+                font-weight: bold;
+                background-color: var(--colorprincipal);
+                color: var(--color-texto);
+            }
+
+        footer {
+            background-color: var(--colorsecundario);
+            padding: 3px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #AAAAAA;
+        }
+
+        .seleccionado {
+            background-color:royalblue !important;
+        }
+
+        .ocupado {
+            background-color: red !important;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CinePlus</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Boletos.html">Comprar Boletos</a></li>
+                <li><a href="Alimentos.html">Alimentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <span><span></span> Disponible</span>
+                <span><span></span> Seleccionado</span>
+                <span><span></span> Ocupado</span>
+            </div>
+
+            <hr>
+
+            <div class="asientos">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+                <span>20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span>26</span>
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+                <span>32</span>
+                <span>33</span>
+                <span>34</span>
+                <span>35</span>
+                <span>36</span>
+                <span>37</span>
+                <span>38</span>
+                <span>39</span>
+                <span>40</span>
+                <span>41</span>
+                <span>42</span>
+                <span>43</span>
+                <span>44</span>
+                <span>45</span>
+                <span>46</span>
+                <span>47</span>
+                <span>48</span>
+                <span>49</span>
+            </div>
+        </section>
+
+        <aside>
+            <h3>Carrito</h3>
+            <div>
+                <p>Asientos seleccionados: <span id="cantidadasientosseleccionados">0</span></p>
+                <p>Cantidad de boletos: <span id="cantidadboletos">0</span></p>
+                <p>Costo por boleto: <span>$50.00</span></p>
+            </div>
+
+            <p>
+                Subotal: <span id="subtotal">$0.00</span>
+            </p>
+            <a href="Alimentos.html">Continuar</a>
+        </aside>
+    </main>
+
+    <footer>
+        <p>2025 CinePlus</p>
+    </footer>
+
+    <script src="Script1.js"></script>
+</body>
+</html>
